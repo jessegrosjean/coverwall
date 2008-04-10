@@ -11,10 +11,10 @@
 
 
 @class CWWall;
-@class CWWallView;
+@class CWView;
 
 @interface CWWindowController : NSWindowController {
-	IBOutlet CWWallView *wallView;
+	IBOutlet CWView *wallView;
 	IBOutlet NSTextField *statusTextField;
 	
 	CWWall *wall;

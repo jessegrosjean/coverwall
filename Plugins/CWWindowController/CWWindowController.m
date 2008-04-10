@@ -8,7 +8,7 @@
 
 #import "CWWindowController.h"
 #import "CWWall.h"
-#import "CWWallView.h"
+#import "CWView.h"
 
 
 @implementation CWWindowController

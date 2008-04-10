@@ -16,11 +16,20 @@
 	if (self = [super init]) {
 		NSString *processesApplicationSupportFolder = [[NSFileManager defaultManager] processesApplicationSupportFolder];
 		NSString *cacheFolder = [processesApplicationSupportFolder stringByAppendingPathComponent:@"Cache"];
+		NSString *cacheBuilderTemplatePath = [[NSBundle bundleForClass:[self class]] pathForAuxiliaryExecutable:@"CWCacheBuilder"];
+		NSString *cacheBuilderExecutablePath = [cacheFolder stringByAppendingPathComponent:@"CWCacheBuilder"];
 		
 		[[NSFileManager defaultManager] removeFileAtPath:cacheFolder handler:nil];
 		[[NSFileManager defaultManager] createDirectoryAtPath:cacheFolder attributes:nil];
+		[[NSFileManager defaultManager] copyPath:cacheBuilderTemplatePath toPath:cacheBuilderExecutablePath handler:nil];
 		
-		[NSTask launchedTaskWithLaunchPath:[[[[NSBundle bundleForClass:[self class]] executablePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"CWCacheBuilder"] arguments:[NSArray arrayWithObject:cacheFolder]];
+		NSTask *cacheBuilderTask = [[NSTask alloc] init];
+		[cacheBuilderTask setLaunchPath:cacheBuilderExecutablePath];
+		[cacheBuilderTask setCurrentDirectoryPath:[cacheBuilderExecutablePath stringByDeletingLastPathComponent]];
+		[cacheBuilderTask setArguments:[NSArray arrayWithObject:cacheFolder]];
+		[cacheBuilderTask launch];
+		
+//		[NSTask launchedTaskWithLaunchPath:[[[[NSBundle bundleForClass:[self class]] executablePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"CWCacheBuilder"] arguments:[NSArray arrayWithObject:cacheFolder]];
 	}
 	
 	return self;

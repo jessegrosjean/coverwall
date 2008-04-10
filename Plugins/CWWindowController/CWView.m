@@ -1,16 +1,16 @@
 //
-//  CWWallView.m
+//  CWView.m
 //  CoverWall
 //
 //  Created by Jesse Grosjean on 4/9/08.
 //  Copyright 2008 __MyCompanyName__. All rights reserved.
 //
 
-#import "CWWallView.h"
+#import "CWView.h"
 #import <QuartzCore/QuartzCore.h>
 
 
-@implementation CWWallView
+@implementation CWView
 
 - (void)awakeFromNib {
 //	self.wantsLayer = YES;

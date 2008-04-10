@@ -105,7 +105,7 @@
 	}
 	
 	[[NSPropertyListSerialization dataFromPropertyList:trackDictionaries format:NSPropertyListBinaryFormat_v1_0 errorDescription:NULL] writeToFile:[cacheDirectory stringByAppendingPathComponent:@"tracks.plist"] atomically:YES];
-	[[NSPropertyListSerialization dataFromPropertyList:failedAlbums format:NSPropertyListBinaryFormat_v1_0 errorDescription:NULL] writeToFile:[cacheDirectory stringByAppendingPathComponent:@"failedAlbums.plist"] atomically:YES];
+	[[NSPropertyListSerialization dataFromPropertyList:failedAlbums format:NSPropertyListBinaryFormat_v1_0 errorDescription:NULL] writeToFile:[cacheDirectory stringByAppendingPathComponent:@"errors.plist"] atomically:YES];
 }
 
 - (void)eventDidFail:(const AppleEvent *)event withError:(NSError *)error {

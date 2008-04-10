@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88461CB50DAD6FAC001F32ED /* CWWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88461CB40DAD6FAC001F32ED /* CWWindow.xib */; };
-		88461D240DAD74AA001F32ED /* CWWallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88461D230DAD74AA001F32ED /* CWWallView.m */; };
+		885BEE0A0DAE935A00CF7C3B /* CWView.m in Sources */ = {isa = PBXBuildFile; fileRef = 885BEE090DAE935A00CF7C3B /* CWView.m */; };
 		885CDEE20DAE735F004511E2 /* CWCacheBuilder in Copy Executables */ = {isa = PBXBuildFile; fileRef = 88E8DB6F0DAE49B7009A57FB /* CWCacheBuilder */; };
 		885CE0100DAE792A004511E2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885CE00F0DAE792A004511E2 /* CoreServices.framework */; };
 		8885192B0DAD077B003DFBC4 /* CWWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8885192A0DAD077B003DFBC4 /* CWWindowController.m */; };
@@ -247,8 +247,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CoverWall_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverWall_Prefix.pch; sourceTree = "<group>"; };
 		88461CB40DAD6FAC001F32ED /* CWWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CWWindow.xib; sourceTree = "<group>"; };
-		88461D220DAD74AA001F32ED /* CWWallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWallView.h; sourceTree = "<group>"; };
-		88461D230DAD74AA001F32ED /* CWWallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWallView.m; sourceTree = "<group>"; };
+		885BEE080DAE935A00CF7C3B /* CWView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWView.h; sourceTree = "<group>"; };
+		885BEE090DAE935A00CF7C3B /* CWView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWView.m; sourceTree = "<group>"; };
 		885CE00F0DAE792A004511E2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		888518920DACFE04003DFBC4 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		8885191E0DAD06ED003DFBC4 /* Plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Plugin.xml; sourceTree = "<group>"; };
@@ -523,10 +523,10 @@
 		88B2A1240DAC0D3200280971 /* CWWindowController */ = {
 			isa = PBXGroup;
 			children = (
+				885BEE080DAE935A00CF7C3B /* CWView.h */,
+				885BEE090DAE935A00CF7C3B /* CWView.m */,
 				88E8D7C40DAD7D6D009A57FB /* CWWindow.h */,
 				88E8D7C50DAD7D6D009A57FB /* CWWindow.m */,
-				88461D220DAD74AA001F32ED /* CWWallView.h */,
-				88461D230DAD74AA001F32ED /* CWWallView.m */,
 				888519290DAD077B003DFBC4 /* CWWindowController.h */,
 				8885192A0DAD077B003DFBC4 /* CWWindowController.m */,
 				888519200DAD06F3003DFBC4 /* Resources */,
@@ -818,8 +818,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8885192B0DAD077B003DFBC4 /* CWWindowController.m in Sources */,
-				88461D240DAD74AA001F32ED /* CWWallView.m in Sources */,
 				88E8D7C60DAD7D6D009A57FB /* CWWindow.m in Sources */,
+				885BEE0A0DAE935A00CF7C3B /* CWView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

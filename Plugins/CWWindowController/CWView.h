@@ -1,5 +1,5 @@
 //
-//  CWWallView.h
+//  CWView.h
 //  CoverWall
 //
 //  Created by Jesse Grosjean on 4/9/08.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface CWWallView : NSView {
+@interface CWView : NSView {
 	NSImage *wallImage;
 	NSPoint wallImageOrigin;
 	NSSize wallImageSize;
