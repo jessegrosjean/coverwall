@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin
+	id="com.hogbaysoftware.coverwall.CWWall"
+	label="CoverWall Artwork"
+	version="1.0.0"
+	info="CoverWall Artwork">
+
+	<requirement bundle="com.blocks.Blocks" version="1.0.0" />
+	<requirement bundle="com.blocks.BDocuments" version="1.0.0" />
+
+</plugin>

@@ -24,7 +24,7 @@
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
-	return [[NSDocumentController sharedDocumentController] applicationShouldOpenUntitledFile:sender];
+	return NO;
 }
 
 #pragma mark Help Actions

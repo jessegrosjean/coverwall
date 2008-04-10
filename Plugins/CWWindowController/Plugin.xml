@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin
+	id="com.hogbaysoftware.coverwall.CWWindowController"
+	label="CoverWall Window Controller"
+	version="1.0.0"
+	info="CoverWall Window Controller">
+
+	<requirement bundle="com.blocks.Blocks" version="1.0.0" />
+	<requirement bundle="com.blocks.BLifecycle" version="1.0.0" />
+	<requirement bundle="com.blocks.BUserInterface" version="1.0.0" />
+	<requirement bundle="com.hogbaysoftware.coverwall.CWWall" version="1.0.0" />
+
+	<extension point="com.blocks.BLifecycle.lifecycle">
+		<applicationWillFinishLaunching class="CWWindowController sharedInstance" />
+	</extension>
+		
+	<extension point="com.blocks.BUserInterface.menus" processOrder="2">
+		<menu id="com.blocks.BUserInterface.menus.main">
+			<menuitem title="%Artwork" id="artwork" submenu="com.hogbaysoftware.coverwall.CWWindowController.menus.main.artwork" location="after:edit" />
+		</menu>
+
+		<menu id="com.hogbaysoftware.coverwall.CWWindowController.menus.main.artwork">
+			<menuitem title="%Refresh Wall" id="refreshWall" action="refreshWall:" keyEquivalent="r" target="CWWindowController sharedInstance" />
+		</menu>
+	</extension>
+		
+</plugin>
