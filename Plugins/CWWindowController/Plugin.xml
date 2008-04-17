@@ -9,7 +9,6 @@
 	<requirement bundle="com.blocks.Blocks" version="1.0.0" />
 	<requirement bundle="com.blocks.BLifecycle" version="1.0.0" />
 	<requirement bundle="com.blocks.BUserInterface" version="1.0.0" />
-	<requirement bundle="com.hogbaysoftware.coverwall.CWWall" version="1.0.0" />
 
 	<extension point="com.blocks.BLifecycle.lifecycle">
 		<applicationWillFinishLaunching class="CWWindowController sharedInstance" />
@@ -21,7 +20,8 @@
 		</menu>
 
 		<menu id="com.hogbaysoftware.coverwall.CWWindowController.menus.main.artwork">
-			<menuitem title="%Refresh Wall" id="refreshWall" action="refreshWall:" keyEquivalent="r" target="CWWindowController sharedInstance" />
+			<menuitem title="%Reload" id="reload" action="reload:" keyEquivalent="R" target="CWWindowController sharedInstance" />
+			<menuitem title="%Update" id="update" action="update:" keyEquivalent="r" target="CWWindowController sharedInstance" />
 		</menu>
 	</extension>
 		

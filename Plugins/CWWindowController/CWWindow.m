@@ -10,13 +10,13 @@
 
 
 @implementation CWWindow
-
+/*
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)styleMask backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation {
 	if (self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO]) {
 	}
 	return self;
 }
-
+*/
 - (BOOL)canBecomeKeyWindow {
 	return YES;
 }

@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882539010DB78B1A00C068FC /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882539000DB78B1A00C068FC /* Quartz.framework */; };
 		88461CB50DAD6FAC001F32ED /* CWWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88461CB40DAD6FAC001F32ED /* CWWindow.xib */; };
-		885BEE0A0DAE935A00CF7C3B /* CWView.m in Sources */ = {isa = PBXBuildFile; fileRef = 885BEE090DAE935A00CF7C3B /* CWView.m */; };
-		885CDEE20DAE735F004511E2 /* CWCacheBuilder in Copy Executables */ = {isa = PBXBuildFile; fileRef = 88E8DB6F0DAE49B7009A57FB /* CWCacheBuilder */; };
-		885CE0100DAE792A004511E2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885CE00F0DAE792A004511E2 /* CoreServices.framework */; };
+		88638C010DB3E70E00DC5C45 /* CWLibraryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BF00DB3E70E00DC5C45 /* CWLibraryView.m */; };
+		88638C020DB3E70E00DC5C45 /* CWReloadLibraryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BF20DB3E70E00DC5C45 /* CWReloadLibraryOperation.m */; };
+		88638C030DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BF40DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m */; };
+		88638C060DB3E70E00DC5C45 /* CWLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BFA0DB3E70E00DC5C45 /* CWLibrary.m */; };
+		88638C070DB3E70E00DC5C45 /* CWArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BFC0DB3E70E00DC5C45 /* CWArtist.m */; };
+		88638C080DB3E70E00DC5C45 /* CWAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BFE0DB3E70E00DC5C45 /* CWAlbum.m */; };
+		88638C090DB3E70E00DC5C45 /* CWTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638C000DB3E70E00DC5C45 /* CWTrack.m */; };
+		88638C700DB3E97D00DC5C45 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88638C6F0DB3E97D00DC5C45 /* QuickLook.framework */; };
+		88638DD70DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638DD60DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m */; };
+		886E7E3B0DB7763000E75261 /* Cover Missing (TV).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E360DB7763000E75261 /* Cover Missing (TV).png */; };
+		886E7E3C0DB7763000E75261 /* Cover Missing (Podcast).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E370DB7763000E75261 /* Cover Missing (Podcast).png */; };
+		886E7E3D0DB7763000E75261 /* Cover Missing (Movie).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E380DB7763000E75261 /* Cover Missing (Movie).png */; };
+		886E7E3E0DB7763000E75261 /* Cover Missing (Book).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E390DB7763000E75261 /* Cover Missing (Book).png */; };
+		886E7E3F0DB7763000E75261 /* Cover Missing.png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E3A0DB7763000E75261 /* Cover Missing.png */; };
 		8885192B0DAD077B003DFBC4 /* CWWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8885192A0DAD077B003DFBC4 /* CWWindowController.m */; };
 		888519480DAD07E6003DFBC4 /* Plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8885191E0DAD06ED003DFBC4 /* Plugin.xml */; };
-		88851AD80DAD51EF003DFBC4 /* CWWall.h in Headers */ = {isa = PBXBuildFile; fileRef = 88851AD60DAD51EF003DFBC4 /* CWWall.h */; };
-		88851AD90DAD51EF003DFBC4 /* CWWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 88851AD70DAD51EF003DFBC4 /* CWWall.m */; };
 		88B2A0730DAC050E00280971 /* CWApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B2A0720DAC050E00280971 /* CWApplication.m */; };
 		88B2A0760DAC057400280971 /* CWApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B2A0750DAC057400280971 /* CWApplicationDelegate.m */; };
 		88B2A0A70DAC081100280971 /* Blocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B2A0450DAC043900280971 /* Blocks.framework */; };
@@ -27,23 +37,13 @@
 		88B2A0BA0DAC088700280971 /* BSoftwareUpdate.plugin in Copy Files (Plugins) */ = {isa = PBXBuildFile; fileRef = 88B2A06F0DAC04BE00280971 /* BSoftwareUpdate.plugin */; };
 		88B2A0BC0DAC08BF00280971 /* Blocks.framework in Copy Files (Frameworks) */ = {isa = PBXBuildFile; fileRef = 88B2A0450DAC043900280971 /* Blocks.framework */; };
 		88B2A0CB0DAC09BC00280971 /* Plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = 88B2A0CA0DAC09BC00280971 /* Plugin.xml */; };
-		88B2A1230DAC0D2400280971 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88B2A1220DAC0D2400280971 /* Info.plist */; };
 		88B2A1260DAC0D3200280971 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88B2A1250DAC0D3200280971 /* Info.plist */; };
-		88B2A12B0DAC0DF500280971 /* Blocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B2A0450DAC043900280971 /* Blocks.framework */; };
-		88B2A12D0DAC0DF600280971 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		88B2A1300DAC0E0300280971 /* Blocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B2A0450DAC043900280971 /* Blocks.framework */; };
 		88B2A1320DAC0E0400280971 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		88B2A1380DAC0E3800280971 /* CWWall.plugin in Copy Files (Plugins) */ = {isa = PBXBuildFile; fileRef = 88B2A1130DAC0C9E00280971 /* CWWall.plugin */; };
 		88B2A1390DAC0E3C00280971 /* CWWindowController.plugin in Copy Files (Plugins) */ = {isa = PBXBuildFile; fileRef = 88B2A11C0DAC0CBF00280971 /* CWWindowController.plugin */; };
-		88B2A14E0DAC547900280971 /* Plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = 88B2A14D0DAC547900280971 /* Plugin.xml */; };
-		88B2A1640DAC54F900280971 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B2A1630DAC54F900280971 /* ScriptingBridge.framework */; };
 		88E8D7C60DAD7D6D009A57FB /* CWWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E8D7C50DAD7D6D009A57FB /* CWWindow.m */; };
 		88E8D81A0DAD7EF9009A57FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E8D8190DAD7EF9009A57FB /* QuartzCore.framework */; };
 		88E8D91A0DAD8155009A57FB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E8D9190DAD8155009A57FB /* Carbon.framework */; };
-		88E8DB7F0DAE4B2D009A57FB /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B2A1630DAC54F900280971 /* ScriptingBridge.framework */; };
-		88E8DB800DAE4B35009A57FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		88E8DB840DAE4B71009A57FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E8DB830DAE4B71009A57FB /* main.m */; };
-		88E8DB970DAE4C8D009A57FB /* CWCacheBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E8DB960DAE4C8D009A57FB /* CWCacheBuilder.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -51,13 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		885CDEDB0DAE7339004511E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88E8DB6E0DAE49B7009A57FB;
-			remoteInfo = CWCacheBuilder;
-		};
 		88B2A0440DAC043900280971 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88B2A0400DAC043900280971 /* Blocks.xcodeproj */;
@@ -170,20 +163,6 @@
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = BLifecycle;
 		};
-		88B2A1290DAC0D5E00280971 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88B2A0400DAC043900280971 /* Blocks.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Blocks;
-		};
-		88B2A1330DAC0E1700280971 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88B2A1120DAC0C9E00280971;
-			remoteInfo = CWArtwork;
-		};
 		88B2A1350DAC0E1700280971 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -194,17 +173,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		885CDEE50DAE7397004511E2 /* Copy Executables */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-				885CDEE20DAE735F004511E2 /* CWCacheBuilder in Copy Executables */,
-			);
-			name = "Copy Executables";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88B2A0C00DAC08DD00280971 /* Copy Files (Frameworks) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,7 +197,6 @@
 				88B2A0B80DAC087F00280971 /* BCrashReporter.plugin in Copy Files (Plugins) */,
 				88B2A0B90DAC088300280971 /* BLicenseManager.plugin in Copy Files (Plugins) */,
 				88B2A0BA0DAC088700280971 /* BSoftwareUpdate.plugin in Copy Files (Plugins) */,
-				88B2A1380DAC0E3800280971 /* CWWall.plugin in Copy Files (Plugins) */,
 				88B2A1390DAC0E3C00280971 /* CWWindowController.plugin in Copy Files (Plugins) */,
 			);
 			name = "Copy Files (Plugins)";
@@ -246,16 +213,35 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CoverWall_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverWall_Prefix.pch; sourceTree = "<group>"; };
+		882539000DB78B1A00C068FC /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		88461CB40DAD6FAC001F32ED /* CWWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CWWindow.xib; sourceTree = "<group>"; };
-		885BEE080DAE935A00CF7C3B /* CWView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWView.h; sourceTree = "<group>"; };
-		885BEE090DAE935A00CF7C3B /* CWView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWView.m; sourceTree = "<group>"; };
 		885CE00F0DAE792A004511E2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
-		888518920DACFE04003DFBC4 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		88638BD60DB3E6D600DC5C45 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		88638BEF0DB3E70E00DC5C45 /* CWLibraryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLibraryView.h; sourceTree = "<group>"; };
+		88638BF00DB3E70E00DC5C45 /* CWLibraryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLibraryView.m; sourceTree = "<group>"; };
+		88638BF10DB3E70E00DC5C45 /* CWReloadLibraryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWReloadLibraryOperation.h; sourceTree = "<group>"; };
+		88638BF20DB3E70E00DC5C45 /* CWReloadLibraryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWReloadLibraryOperation.m; sourceTree = "<group>"; };
+		88638BF30DB3E70E00DC5C45 /* CWUpdateLibraryOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUpdateLibraryOperation.h; sourceTree = "<group>"; };
+		88638BF40DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUpdateLibraryOperation.m; sourceTree = "<group>"; };
+		88638BF90DB3E70E00DC5C45 /* CWLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLibrary.h; sourceTree = "<group>"; };
+		88638BFA0DB3E70E00DC5C45 /* CWLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLibrary.m; sourceTree = "<group>"; };
+		88638BFB0DB3E70E00DC5C45 /* CWArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWArtist.h; sourceTree = "<group>"; };
+		88638BFC0DB3E70E00DC5C45 /* CWArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWArtist.m; sourceTree = "<group>"; };
+		88638BFD0DB3E70E00DC5C45 /* CWAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAlbum.h; sourceTree = "<group>"; };
+		88638BFE0DB3E70E00DC5C45 /* CWAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAlbum.m; sourceTree = "<group>"; };
+		88638BFF0DB3E70E00DC5C45 /* CWTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTrack.h; sourceTree = "<group>"; };
+		88638C000DB3E70E00DC5C45 /* CWTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTrack.m; sourceTree = "<group>"; };
+		88638C6F0DB3E97D00DC5C45 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = /System/Library/Frameworks/QuickLook.framework; sourceTree = "<absolute>"; };
+		88638DD50DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLoadArtworkThumbnailOperation.h; sourceTree = "<group>"; };
+		88638DD60DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLoadArtworkThumbnailOperation.m; sourceTree = "<group>"; };
+		886E7E360DB7763000E75261 /* Cover Missing (TV).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (TV).png"; sourceTree = "<group>"; };
+		886E7E370DB7763000E75261 /* Cover Missing (Podcast).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (Podcast).png"; sourceTree = "<group>"; };
+		886E7E380DB7763000E75261 /* Cover Missing (Movie).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (Movie).png"; sourceTree = "<group>"; };
+		886E7E390DB7763000E75261 /* Cover Missing (Book).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (Book).png"; sourceTree = "<group>"; };
+		886E7E3A0DB7763000E75261 /* Cover Missing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing.png"; sourceTree = "<group>"; };
 		8885191E0DAD06ED003DFBC4 /* Plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Plugin.xml; sourceTree = "<group>"; };
 		888519290DAD077B003DFBC4 /* CWWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWindowController.h; sourceTree = "<group>"; };
 		8885192A0DAD077B003DFBC4 /* CWWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWindowController.m; sourceTree = "<group>"; };
-		88851AD60DAD51EF003DFBC4 /* CWWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWall.h; sourceTree = "<group>"; };
-		88851AD70DAD51EF003DFBC4 /* CWWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWall.m; sourceTree = "<group>"; };
 		88B2A0400DAC043900280971 /* Blocks.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Blocks.xcodeproj; path = ../Blocks/Blocks.xcodeproj; sourceTree = SOURCE_ROOT; };
 		88B2A0460DAC046600280971 /* BLifecycle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BLifecycle.xcodeproj; path = ../BLifecycle/BLifecycle.xcodeproj; sourceTree = SOURCE_ROOT; };
 		88B2A04C0DAC047600280971 /* BDocuments.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BDocuments.xcodeproj; path = ../BDocuments/BDocuments.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -269,36 +255,18 @@
 		88B2A0740DAC057400280971 /* CWApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWApplicationDelegate.h; sourceTree = "<group>"; };
 		88B2A0750DAC057400280971 /* CWApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWApplicationDelegate.m; sourceTree = "<group>"; };
 		88B2A0CA0DAC09BC00280971 /* Plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Plugin.xml; sourceTree = "<group>"; };
-		88B2A1130DAC0C9E00280971 /* CWWall.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWWall.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B2A11C0DAC0CBF00280971 /* CWWindowController.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWWindowController.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		88B2A1220DAC0D2400280971 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B2A1250DAC0D3200280971 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88B2A14D0DAC547900280971 /* Plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Plugin.xml; sourceTree = "<group>"; };
 		88B2A1630DAC54F900280971 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = ../../../../../System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SOURCE_ROOT; };
 		88E8D7C40DAD7D6D009A57FB /* CWWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWindow.h; sourceTree = "<group>"; };
 		88E8D7C50DAD7D6D009A57FB /* CWWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWindow.m; sourceTree = "<group>"; };
 		88E8D8190DAD7EF9009A57FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
 		88E8D9190DAD8155009A57FB /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		88E8DB6F0DAE49B7009A57FB /* CWCacheBuilder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CWCacheBuilder; sourceTree = BUILT_PRODUCTS_DIR; };
-		88E8DB830DAE4B71009A57FB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		88E8DB950DAE4C8D009A57FB /* CWCacheBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCacheBuilder.h; sourceTree = "<group>"; };
-		88E8DB960DAE4C8D009A57FB /* CWCacheBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCacheBuilder.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CoverWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoverWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		88B2A1110DAC0C9E00280971 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88B2A12D0DAC0DF600280971 /* Cocoa.framework in Frameworks */,
-				88B2A12B0DAC0DF500280971 /* Blocks.framework in Frameworks */,
-				88B2A1640DAC54F900280971 /* ScriptingBridge.framework in Frameworks */,
-				885CE0100DAE792A004511E2 /* CoreServices.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88B2A11A0DAC0CBF00280971 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,15 +275,8 @@
 				88B2A1300DAC0E0300280971 /* Blocks.framework in Frameworks */,
 				88E8D81A0DAD7EF9009A57FB /* QuartzCore.framework in Frameworks */,
 				88E8D91A0DAD8155009A57FB /* Carbon.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88E8DB6D0DAE49B7009A57FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88E8DB800DAE4B35009A57FB /* Cocoa.framework in Frameworks */,
-				88E8DB7F0DAE4B2D009A57FB /* ScriptingBridge.framework in Frameworks */,
+				88638C700DB3E97D00DC5C45 /* QuickLook.framework in Frameworks */,
+				882539010DB78B1A00C068FC /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +314,8 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				882539000DB78B1A00C068FC /* Quartz.framework */,
+				88638C6F0DB3E97D00DC5C45 /* QuickLook.framework */,
 				885CE00F0DAE792A004511E2 /* CoreServices.framework */,
 				88E8D9190DAD8155009A57FB /* Carbon.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -368,9 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* CoverWall.app */,
-				88B2A1130DAC0C9E00280971 /* CWWall.plugin */,
 				88B2A11C0DAC0CBF00280971 /* CWWindowController.plugin */,
-				88E8DB6F0DAE49B7009A57FB /* CWCacheBuilder */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -390,7 +351,6 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				88B2A0780DAC05E700280971 /* Plugins */,
-				88E8DB790DAE4AED009A57FB /* Tools */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -426,12 +386,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		88638C0A0DB3E71900DC5C45 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				88638BF10DB3E70E00DC5C45 /* CWReloadLibraryOperation.h */,
+				88638BF20DB3E70E00DC5C45 /* CWReloadLibraryOperation.m */,
+				88638BF30DB3E70E00DC5C45 /* CWUpdateLibraryOperation.h */,
+				88638BF40DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m */,
+				88638DD50DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.h */,
+				88638DD60DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		88638C0B0DB3E72000DC5C45 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				88638BF90DB3E70E00DC5C45 /* CWLibrary.h */,
+				88638BFA0DB3E70E00DC5C45 /* CWLibrary.m */,
+				88638BFB0DB3E70E00DC5C45 /* CWArtist.h */,
+				88638BFC0DB3E70E00DC5C45 /* CWArtist.m */,
+				88638BFD0DB3E70E00DC5C45 /* CWAlbum.h */,
+				88638BFE0DB3E70E00DC5C45 /* CWAlbum.m */,
+				88638BFF0DB3E70E00DC5C45 /* CWTrack.h */,
+				88638C000DB3E70E00DC5C45 /* CWTrack.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		88638C0C0DB3E74500DC5C45 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88638BEF0DB3E70E00DC5C45 /* CWLibraryView.h */,
+				88638BF00DB3E70E00DC5C45 /* CWLibraryView.m */,
+				88E8D7C40DAD7D6D009A57FB /* CWWindow.h */,
+				88E8D7C50DAD7D6D009A57FB /* CWWindow.m */,
+				888519290DAD077B003DFBC4 /* CWWindowController.h */,
+				8885192A0DAD077B003DFBC4 /* CWWindowController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		888519200DAD06F3003DFBC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				88B2A1250DAC0D3200280971 /* Info.plist */,
 				8885191E0DAD06ED003DFBC4 /* Plugin.xml */,
 				88461CB40DAD6FAC001F32ED /* CWWindow.xib */,
+				886E7E360DB7763000E75261 /* Cover Missing (TV).png */,
+				886E7E370DB7763000E75261 /* Cover Missing (Podcast).png */,
+				886E7E380DB7763000E75261 /* Cover Missing (Movie).png */,
+				886E7E390DB7763000E75261 /* Cover Missing (Book).png */,
+				886E7E3A0DB7763000E75261 /* Cover Missing.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -503,99 +509,26 @@
 		88B2A0780DAC05E700280971 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				88B2A1210DAC0D2400280971 /* CWWall */,
 				88B2A1240DAC0D3200280971 /* CWWindowController */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
 		};
-		88B2A1210DAC0D2400280971 /* CWWall */ = {
-			isa = PBXGroup;
-			children = (
-				888518920DACFE04003DFBC4 /* iTunes.h */,
-				88851AD60DAD51EF003DFBC4 /* CWWall.h */,
-				88851AD70DAD51EF003DFBC4 /* CWWall.m */,
-				88B2A14C0DAC546300280971 /* Resources */,
-			);
-			path = CWWall;
-			sourceTree = "<group>";
-		};
 		88B2A1240DAC0D3200280971 /* CWWindowController */ = {
 			isa = PBXGroup;
 			children = (
-				885BEE080DAE935A00CF7C3B /* CWView.h */,
-				885BEE090DAE935A00CF7C3B /* CWView.m */,
-				88E8D7C40DAD7D6D009A57FB /* CWWindow.h */,
-				88E8D7C50DAD7D6D009A57FB /* CWWindow.m */,
-				888519290DAD077B003DFBC4 /* CWWindowController.h */,
-				8885192A0DAD077B003DFBC4 /* CWWindowController.m */,
+				88638BD60DB3E6D600DC5C45 /* iTunes.h */,
+				88638C0B0DB3E72000DC5C45 /* Library */,
+				88638C0A0DB3E71900DC5C45 /* Operations */,
+				88638C0C0DB3E74500DC5C45 /* Views */,
 				888519200DAD06F3003DFBC4 /* Resources */,
 			);
 			path = CWWindowController;
 			sourceTree = "<group>";
 		};
-		88B2A14C0DAC546300280971 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				88B2A1220DAC0D2400280971 /* Info.plist */,
-				88B2A14D0DAC547900280971 /* Plugin.xml */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		88E8DB790DAE4AED009A57FB /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				88E8DB7A0DAE4B02009A57FB /* CWCacheBuilder */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		88E8DB7A0DAE4B02009A57FB /* CWCacheBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				88E8DB950DAE4C8D009A57FB /* CWCacheBuilder.h */,
-				88E8DB960DAE4C8D009A57FB /* CWCacheBuilder.m */,
-				88E8DB830DAE4B71009A57FB /* main.m */,
-			);
-			path = CWCacheBuilder;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		888519950DAD0A03003DFBC4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88851AD80DAD51EF003DFBC4 /* CWWall.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		88B2A1120DAC0C9E00280971 /* CWWall */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88B2A1170DAC0C9F00280971 /* Build configuration list for PBXNativeTarget "CWWall" */;
-			buildPhases = (
-				888519950DAD0A03003DFBC4 /* Headers */,
-				885CDEE50DAE7397004511E2 /* Copy Executables */,
-				88B2A10F0DAC0C9E00280971 /* Resources */,
-				88B2A1100DAC0C9E00280971 /* Sources */,
-				88B2A1110DAC0C9E00280971 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				88B2A12A0DAC0D5E00280971 /* PBXTargetDependency */,
-				885CDEDC0DAE7339004511E2 /* PBXTargetDependency */,
-			);
-			name = CWWall;
-			productName = CWArtwork;
-			productReference = 88B2A1130DAC0C9E00280971 /* CWWall.plugin */;
-			productType = "com.apple.product-type.bundle";
-		};
 		88B2A11B0DAC0CBF00280971 /* CWWindowController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88B2A1200DAC0CC000280971 /* Build configuration list for PBXNativeTarget "CWWindowController" */;
@@ -612,22 +545,6 @@
 			productName = CWArtworkWindowController;
 			productReference = 88B2A11C0DAC0CBF00280971 /* CWWindowController.plugin */;
 			productType = "com.apple.product-type.bundle";
-		};
-		88E8DB6E0DAE49B7009A57FB /* CWCacheBuilder */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88E8DB740DAE49D6009A57FB /* Build configuration list for PBXNativeTarget "CWCacheBuilder" */;
-			buildPhases = (
-				88E8DB6C0DAE49B7009A57FB /* Sources */,
-				88E8DB6D0DAE49B7009A57FB /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CWCacheBuilder;
-			productName = CWCacheBuilder;
-			productReference = 88E8DB6F0DAE49B7009A57FB /* CWCacheBuilder */;
-			productType = "com.apple.product-type.tool";
 		};
 		8D1107260486CEB800E47090 /* CoverWall */ = {
 			isa = PBXNativeTarget;
@@ -650,7 +567,6 @@
 				88B2A0980DAC065800280971 /* PBXTargetDependency */,
 				88B2A09A0DAC065800280971 /* PBXTargetDependency */,
 				88B2A09C0DAC065800280971 /* PBXTargetDependency */,
-				88B2A1340DAC0E1700280971 /* PBXTargetDependency */,
 				88B2A1360DAC0E1700280971 /* PBXTargetDependency */,
 			);
 			name = CoverWall;
@@ -706,9 +622,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* CoverWall */,
-				88B2A1120DAC0C9E00280971 /* CWWall */,
 				88B2A11B0DAC0CBF00280971 /* CWWindowController */,
-				88E8DB6E0DAE49B7009A57FB /* CWCacheBuilder */,
 			);
 		};
 /* End PBXProject section */
@@ -773,15 +687,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		88B2A10F0DAC0C9E00280971 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88B2A1230DAC0D2400280971 /* Info.plist in Resources */,
-				88B2A14E0DAC547900280971 /* Plugin.xml in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88B2A1180DAC0CBF00280971 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -789,6 +694,11 @@
 				88B2A1260DAC0D3200280971 /* Info.plist in Resources */,
 				888519480DAD07E6003DFBC4 /* Plugin.xml in Resources */,
 				88461CB50DAD6FAC001F32ED /* CWWindow.xib in Resources */,
+				886E7E3B0DB7763000E75261 /* Cover Missing (TV).png in Resources */,
+				886E7E3C0DB7763000E75261 /* Cover Missing (Podcast).png in Resources */,
+				886E7E3D0DB7763000E75261 /* Cover Missing (Movie).png in Resources */,
+				886E7E3E0DB7763000E75261 /* Cover Missing (Book).png in Resources */,
+				886E7E3F0DB7763000E75261 /* Cover Missing.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,30 +715,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		88B2A1100DAC0C9E00280971 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88851AD90DAD51EF003DFBC4 /* CWWall.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88B2A1190DAC0CBF00280971 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8885192B0DAD077B003DFBC4 /* CWWindowController.m in Sources */,
 				88E8D7C60DAD7D6D009A57FB /* CWWindow.m in Sources */,
-				885BEE0A0DAE935A00CF7C3B /* CWView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88E8DB6C0DAE49B7009A57FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88E8DB840DAE4B71009A57FB /* main.m in Sources */,
-				88E8DB970DAE4C8D009A57FB /* CWCacheBuilder.m in Sources */,
+				88638C010DB3E70E00DC5C45 /* CWLibraryView.m in Sources */,
+				88638C020DB3E70E00DC5C45 /* CWReloadLibraryOperation.m in Sources */,
+				88638C030DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m in Sources */,
+				88638C060DB3E70E00DC5C45 /* CWLibrary.m in Sources */,
+				88638C070DB3E70E00DC5C45 /* CWArtist.m in Sources */,
+				88638C080DB3E70E00DC5C45 /* CWAlbum.m in Sources */,
+				88638C090DB3E70E00DC5C45 /* CWTrack.m in Sources */,
+				88638DD70DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,11 +745,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		885CDEDC0DAE7339004511E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88E8DB6E0DAE49B7009A57FB /* CWCacheBuilder */;
-			targetProxy = 885CDEDB0DAE7339004511E2 /* PBXContainerItemProxy */;
-		};
 		88B2A08E0DAC065800280971 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BCrashReporter;
@@ -890,16 +785,6 @@
 			name = BLifecycle;
 			targetProxy = 88B2A09B0DAC065800280971 /* PBXContainerItemProxy */;
 		};
-		88B2A12A0DAC0D5E00280971 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Blocks;
-			targetProxy = 88B2A1290DAC0D5E00280971 /* PBXContainerItemProxy */;
-		};
-		88B2A1340DAC0E1700280971 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88B2A1120DAC0C9E00280971 /* CWWall */;
-			targetProxy = 88B2A1330DAC0E1700280971 /* PBXContainerItemProxy */;
-		};
 		88B2A1360DAC0E1700280971 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88B2A11B0DAC0CBF00280971 /* CWWindowController */;
@@ -927,64 +812,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		88B2A1150DAC0C9F00280971 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				HEADER_SEARCH_PATHS = "../BDocuments/**";
-				INFOPLIST_FILE = Plugins/CWWall/Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-					"-undefined",
-					dynamic_lookup,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = CWWall;
-				WRAPPER_EXTENSION = plugin;
-			};
-			name = Debug;
-		};
-		88B2A1160DAC0C9F00280971 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				HEADER_SEARCH_PATHS = "../BDocuments/**";
-				INFOPLIST_FILE = Plugins/CWWall/Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-					"-undefined",
-					dynamic_lookup,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = CWWall;
-				WRAPPER_EXTENSION = plugin;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		88B2A11E0DAC0CC000280971 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1039,56 +866,6 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = CWWindowController;
 				WRAPPER_EXTENSION = plugin;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
-		88E8DB710DAE49B8009A57FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = unsupported;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INSTALL_PATH = /usr/local/bin;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = CWCacheBuilder;
-			};
-			name = Debug;
-		};
-		88E8DB720DAE49B8009A57FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_GC = unsupported;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INSTALL_PATH = /usr/local/bin;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = CWCacheBuilder;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -1175,29 +952,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		88B2A1170DAC0C9F00280971 /* Build configuration list for PBXNativeTarget "CWWall" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88B2A1150DAC0C9F00280971 /* Debug */,
-				88B2A1160DAC0C9F00280971 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		88B2A1200DAC0CC000280971 /* Build configuration list for PBXNativeTarget "CWWindowController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88B2A11E0DAC0CC000280971 /* Debug */,
 				88B2A11F0DAC0CC000280971 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		88E8DB740DAE49D6009A57FB /* Build configuration list for PBXNativeTarget "CWCacheBuilder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88E8DB710DAE49B8009A57FB /* Debug */,
-				88E8DB720DAE49B8009A57FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

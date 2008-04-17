@@ -7,22 +7,27 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Blocks/Blocks.h>
 #import <Carbon/Carbon.h>
+#import <Quartz/Quartz.h>
 
 
-@class CWWall;
-@class CWView;
+@class CWLibraryView;
 
 @interface CWWindowController : NSWindowController {
-	IBOutlet CWView *wallView;
-	IBOutlet NSTextField *statusTextField;
-	
-	CWWall *wall;
-	NSError *processingError;
+	IBOutlet IKImageBrowserView *coverBrowser;
+	IBOutlet CWLibraryView *libraryView;
+	IBOutlet NSView *accessoryView;
 }
 
 #pragma mark Class Methods
 
 + (id)sharedInstance;
 	
+- (IBAction)saveDocument:(id)sender;
+
 @end
+
+APPKIT_EXTERN NSString *CWExportImageFormat;
+APPKIT_EXTERN NSString *CWExportImageWidth;
+APPKIT_EXTERN NSString *CWExportImageHeight;
