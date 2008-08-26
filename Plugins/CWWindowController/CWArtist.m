@@ -11,11 +11,8 @@
 
 @implementation CWArtist
 
-- (void)dealloc {
-	[albums release];
-	[super dealloc];
-}
-
+@synthesize name;
+@synthesize sortName;
 @synthesize albums;
 
 @end

@@ -12,18 +12,27 @@
 #import <Quartz/Quartz.h>
 
 
-@class CWLibraryView;
+@class CWLibrary;
+@class CWAlbum;
 
 @interface CWWindowController : NSWindowController {
 	IBOutlet IKImageBrowserView *coverBrowser;
-	IBOutlet CWLibraryView *libraryView;
 	IBOutlet NSView *accessoryView;
+	
+	CWLibrary *library;
+	CWAlbum *selectedAlbum;
 }
 
 #pragma mark Class Methods
 
 + (id)sharedInstance;
-	
+
+@property(readonly) CWAlbum *selectedAlbum;
+
+- (IBAction)quickLook:(id)sender;
+- (IBAction)sizeToFit:(id)sender;
+- (IBAction)enterFullScreenMode:(id)sender;
+
 - (IBAction)saveDocument:(id)sender;
 
 @end
@@ -31,3 +40,4 @@
 APPKIT_EXTERN NSString *CWExportImageFormat;
 APPKIT_EXTERN NSString *CWExportImageWidth;
 APPKIT_EXTERN NSString *CWExportImageHeight;
+APPKIT_EXTERN NSString *CWBrowserZoomValue;

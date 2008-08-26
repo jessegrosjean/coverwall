@@ -13,11 +13,12 @@
 
 
 @interface CWArtist (CWLibraryPrivate)
-- (id)initWithName:(NSString *)aName;
+- (id)initWithName:(NSString *)aName track:(CWTrack *)aTrack;
+- (void)sortAlbums;
 @end
 
 @interface CWAlbum (CWLibraryPrivate)
-- (id)initWithName:(NSString *)aName;
+- (id)initWithName:(NSString *)aName track:(CWTrack *)aTrack;
 - (void)sortTracks;
 @end
 
@@ -33,23 +34,49 @@
     return sharedInstance;
 }
 
-+ (NSString *)libraryXMLPath {
-	NSString *path = nil;
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSDictionary *preferences = [NSDictionary dictionaryWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/com.apple.iApps.plist"]];
-	
-	if (preferences) {
-		path = [[NSURL URLWithString:[[preferences valueForKey:@"iTunesRecentDatabases"] lastObject]] path];
-	}
-	
-	if (!path || ![fileManager fileExistsAtPath:path]) {
-		path = [NSHomeDirectory() stringByAppendingPathComponent:@"Music/iTunes/iTunes Music Library.xml"];		
-		if (![fileManager fileExistsAtPath:path]) {
-			path = nil;
++ (NSString *)cacheFolder {
+    static NSString *cacheFolder = nil;
+	if (cacheFolder == nil) {
+		NSFileManager *fileManager = [NSFileManager defaultManager];
+		
+		cacheFolder = [NSHomeDirectory() stringByAppendingPathComponent:@"CoverwallCache"];
+		
+		if (![fileManager fileExistsAtPath:cacheFolder]) {
+			[fileManager createDirectoryAtPath:cacheFolder attributes:nil];
 		}
 	}
+	return cacheFolder;
+}
+
++ (NSMutableDictionary *)libraryXML {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *cachedLibraryXMLPath = [[self cacheFolder] stringByAppendingPathComponent:@"cachedLibraryXML.plist"];
 	
-	return path;
+	if ([fileManager fileExistsAtPath:cachedLibraryXMLPath]) {
+		return [NSPropertyListSerialization propertyListFromData:[NSData dataWithContentsOfFile:cachedLibraryXMLPath] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:nil errorDescription:nil];
+	} else {
+		NSString *path = nil;
+		NSDictionary *preferences = [NSDictionary dictionaryWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Preferences/com.apple.iApps.plist"]];
+		
+		if (preferences) {
+			path = [[NSURL URLWithString:[[preferences valueForKey:@"iTunesRecentDatabases"] lastObject]] path];
+		}
+		
+		if (!path || ![fileManager fileExistsAtPath:path]) {
+			path = [NSHomeDirectory() stringByAppendingPathComponent:@"Music/iTunes/iTunes Music Library.xml"];		
+			if (![fileManager fileExistsAtPath:path]) {
+				path = nil;
+			}
+		}
+
+		if (path) {
+			NSMutableDictionary *result = [NSPropertyListSerialization propertyListFromData:[NSData dataWithContentsOfFile:path] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:NULL errorDescription:NULL];
+			NSData *data = [NSPropertyListSerialization dataFromPropertyList:result format:NSPropertyListBinaryFormat_v1_0 errorDescription:NULL];
+			[data writeToFile:cachedLibraryXMLPath atomically:NO];
+			return result;
+		}
+	}
+	return nil;
 }
 
 #pragma mark Init
@@ -66,12 +93,13 @@
 
 @synthesize artists;
 
-- (id)artistWithName:(NSString *)aName {
-	if (!aName) aName = @"Unknown Artist";
-	CWArtist *artist = [namesToArtists objectForKey:aName];
+- (CWArtist *)artistForTrack:(CWTrack *)aTrack {
+	NSString *artistName = aTrack.artistName;
+	if (!artistName) artistName = @"Unknown Artist";
+	CWArtist *artist = [namesToArtists objectForKey:artistName];
 	if (!artist) {
-		artist = [[CWArtist alloc] initWithName:aName];
-		[namesToArtists setObject:artist forKey:aName];
+		artist = [[CWArtist alloc] initWithName:artistName track:aTrack];
+		[namesToArtists setObject:artist forKey:artistName];
 		[artists addObject:artist];
 	}
 	return artist;
@@ -79,12 +107,13 @@
 
 @synthesize albums;
 
-- (id)albumWithName:(NSString *)aName {
-	if (!aName) aName = @"Unknown Artist";
-	CWAlbum *album = [namesToAlbums objectForKey:aName];
+- (CWAlbum *)albumForTrack:(CWTrack *)aTrack {
+	NSString *albumName = aTrack.albumName;
+	if (!albumName) albumName = @"Unknown Album";
+	CWAlbum *album = [namesToAlbums objectForKey:albumName];
 	if (!album) {
-		album = [[CWAlbum alloc] initWithName:aName];
-		[namesToAlbums setObject:album forKey:aName];
+		album = [[CWAlbum alloc] initWithName:albumName track:aTrack];
+		[namesToAlbums setObject:album forKey:albumName];
 		[albums addObject:album];
 	}
 	return album;
@@ -99,42 +128,43 @@
 	[namesToArtists removeAllObjects];
 	[namesToAlbums removeAllObjects];
 	
-	NSDictionary *libraryDictionary = [NSPropertyListSerialization propertyListFromData:[NSData dataWithContentsOfFile:[CWLibrary libraryXMLPath]] mutabilityOption:NSPropertyListMutableContainersAndLeaves format:NULL errorDescription:NULL];
+	NSMutableDictionary *libraryDictionary = [CWLibrary libraryXML];
 	NSArray *trackDictionaries = [[libraryDictionary objectForKey:@"Tracks"] allValues];
 	
 	for (NSMutableDictionary *eachTrackDictionary in trackDictionaries) {
-		[tracks addObject:[[[CWTrack alloc] initWithTrackDictionary:eachTrackDictionary] autorelease]];
+		[tracks addObject:[[CWTrack alloc] initWithTrackDictionary:eachTrackDictionary]];
 	}
 	
+	[artists sortUsingDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:@"sortName" ascending:YES], nil]];
+	[artists makeObjectsPerformSelector:@selector(sortAlbums)];
+	[albums sortUsingDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:@"sortName" ascending:YES], nil]];
 	[albums makeObjectsPerformSelector:@selector(sortTracks)];
-}
-
-- (void)clearLayer {
-	[CATransaction begin];
-	[CATransaction setValue:[NSNumber numberWithBool:YES] forKey:kCATransactionDisableActions];
-	[[[[self sublayers] copy] autorelease] makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
-	[CATransaction commit];	
 }
 
 @end
 
 @implementation CWArtist (CWLibraryPrivate)
 
-- (id)initWithName:(NSString *)aName {
+- (id)initWithName:(NSString *)aName track:(CWTrack *)aTrack {
 	[super init];
-	self.name = aName;
+	name = aName;
+	sortName = aTrack.sortArtist == nil ? name : aTrack.sortArtist;
 	albums = [[NSMutableArray alloc] init];
 	return self;
+}
+
+- (void)sortAlbums {
+	[albums sortUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"sortName" ascending:YES]]];
 }
 
 @end
 
 @implementation CWAlbum (CWLibraryPrivate)
 
-- (id)initWithName:(NSString *)aName {
+- (id)initWithName:(NSString *)aName track:(CWTrack *)aTrack {
 	[super init];
-	self.name = aName;
-	self.anchorPoint = CGPointMake(0, 0);
+	name = aName;
+	sortName = aTrack.sortAlbum == nil ? name : aTrack.sortAlbum;
 	tracks = [[NSMutableArray alloc] init];
 	return self;
 }

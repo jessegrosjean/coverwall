@@ -16,7 +16,7 @@
 
 - (id)initWithLibrary:(CWLibrary *)aLibrary {
 	[super init];
-	library = [aLibrary retain];
+	library = aLibrary;
 	loadArtworkOperationQueue = [[NSOperationQueue alloc] init];
 	return self;
 }

@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		882539010DB78B1A00C068FC /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882539000DB78B1A00C068FC /* Quartz.framework */; };
 		88461CB50DAD6FAC001F32ED /* CWWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88461CB40DAD6FAC001F32ED /* CWWindow.xib */; };
-		88638C010DB3E70E00DC5C45 /* CWLibraryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BF00DB3E70E00DC5C45 /* CWLibraryView.m */; };
-		88638C020DB3E70E00DC5C45 /* CWReloadLibraryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BF20DB3E70E00DC5C45 /* CWReloadLibraryOperation.m */; };
-		88638C030DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BF40DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m */; };
+		884C70400E2D9C6100200924 /* iTunesAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884C703F0E2D9C6100200924 /* iTunesAccess.framework */; };
 		88638C060DB3E70E00DC5C45 /* CWLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BFA0DB3E70E00DC5C45 /* CWLibrary.m */; };
 		88638C070DB3E70E00DC5C45 /* CWArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BFC0DB3E70E00DC5C45 /* CWArtist.m */; };
 		88638C080DB3E70E00DC5C45 /* CWAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638BFE0DB3E70E00DC5C45 /* CWAlbum.m */; };
 		88638C090DB3E70E00DC5C45 /* CWTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638C000DB3E70E00DC5C45 /* CWTrack.m */; };
 		88638C700DB3E97D00DC5C45 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88638C6F0DB3E97D00DC5C45 /* QuickLook.framework */; };
-		88638DD70DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 88638DD60DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m */; };
 		886E7E3B0DB7763000E75261 /* Cover Missing (TV).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E360DB7763000E75261 /* Cover Missing (TV).png */; };
 		886E7E3C0DB7763000E75261 /* Cover Missing (Podcast).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E370DB7763000E75261 /* Cover Missing (Podcast).png */; };
 		886E7E3D0DB7763000E75261 /* Cover Missing (Movie).png in Resources */ = {isa = PBXBuildFile; fileRef = 886E7E380DB7763000E75261 /* Cover Missing (Movie).png */; };
@@ -37,7 +34,6 @@
 		88B2A0BA0DAC088700280971 /* BSoftwareUpdate.plugin in Copy Files (Plugins) */ = {isa = PBXBuildFile; fileRef = 88B2A06F0DAC04BE00280971 /* BSoftwareUpdate.plugin */; };
 		88B2A0BC0DAC08BF00280971 /* Blocks.framework in Copy Files (Frameworks) */ = {isa = PBXBuildFile; fileRef = 88B2A0450DAC043900280971 /* Blocks.framework */; };
 		88B2A0CB0DAC09BC00280971 /* Plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = 88B2A0CA0DAC09BC00280971 /* Plugin.xml */; };
-		88B2A1260DAC0D3200280971 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88B2A1250DAC0D3200280971 /* Info.plist */; };
 		88B2A1300DAC0E0300280971 /* Blocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B2A0450DAC043900280971 /* Blocks.framework */; };
 		88B2A1320DAC0E0400280971 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		88B2A1390DAC0E3C00280971 /* CWWindowController.plugin in Copy Files (Plugins) */ = {isa = PBXBuildFile; fileRef = 88B2A11C0DAC0CBF00280971 /* CWWindowController.plugin */; };
@@ -45,7 +41,6 @@
 		88E8D81A0DAD7EF9009A57FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E8D8190DAD7EF9009A57FB /* QuartzCore.framework */; };
 		88E8D91A0DAD8155009A57FB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E8D9190DAD8155009A57FB /* Carbon.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
-		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -187,7 +182,7 @@
 		88B2A0C10DAC08DD00280971 /* Copy Files (Plugins) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = Plugins;
+			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				88B2A0B40DAC086E00280971 /* BLifecycle.plugin in Copy Files (Plugins) */,
@@ -215,6 +210,7 @@
 		32CA4F630368D1EE00C91783 /* CoverWall_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverWall_Prefix.pch; sourceTree = "<group>"; };
 		882539000DB78B1A00C068FC /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		88461CB40DAD6FAC001F32ED /* CWWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CWWindow.xib; sourceTree = "<group>"; };
+		884C703F0E2D9C6100200924 /* iTunesAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iTunesAccess.framework; path = /System/Library/PrivateFrameworks/iTunesAccess.framework; sourceTree = "<absolute>"; };
 		885CE00F0DAE792A004511E2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		88638BD60DB3E6D600DC5C45 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		88638BEF0DB3E70E00DC5C45 /* CWLibraryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLibraryView.h; sourceTree = "<group>"; };
@@ -234,6 +230,7 @@
 		88638C6F0DB3E97D00DC5C45 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = /System/Library/Frameworks/QuickLook.framework; sourceTree = "<absolute>"; };
 		88638DD50DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLoadArtworkThumbnailOperation.h; sourceTree = "<group>"; };
 		88638DD60DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLoadArtworkThumbnailOperation.m; sourceTree = "<group>"; };
+		886549DD0DB84148000BB782 /* QuickLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLook.h; sourceTree = "<group>"; };
 		886E7E360DB7763000E75261 /* Cover Missing (TV).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (TV).png"; sourceTree = "<group>"; };
 		886E7E370DB7763000E75261 /* Cover Missing (Podcast).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (Podcast).png"; sourceTree = "<group>"; };
 		886E7E380DB7763000E75261 /* Cover Missing (Movie).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cover Missing (Movie).png"; sourceTree = "<group>"; };
@@ -277,6 +274,7 @@
 				88E8D91A0DAD8155009A57FB /* Carbon.framework in Frameworks */,
 				88638C700DB3E97D00DC5C45 /* QuickLook.framework in Frameworks */,
 				882539010DB78B1A00C068FC /* Quartz.framework in Frameworks */,
+				884C70400E2D9C6100200924 /* iTunesAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +312,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				884C703F0E2D9C6100200924 /* iTunesAccess.framework */,
 				882539000DB78B1A00C068FC /* Quartz.framework */,
 				88638C6F0DB3E97D00DC5C45 /* QuickLook.framework */,
 				885CE00F0DAE792A004511E2 /* CoreServices.framework */,
@@ -386,9 +385,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		88638C0A0DB3E71900DC5C45 /* Operations */ = {
+		8825398F0DB7925800C068FC /* OLD */ = {
 			isa = PBXGroup;
 			children = (
+				88638BEF0DB3E70E00DC5C45 /* CWLibraryView.h */,
+				88638BF00DB3E70E00DC5C45 /* CWLibraryView.m */,
 				88638BF10DB3E70E00DC5C45 /* CWReloadLibraryOperation.h */,
 				88638BF20DB3E70E00DC5C45 /* CWReloadLibraryOperation.m */,
 				88638BF30DB3E70E00DC5C45 /* CWUpdateLibraryOperation.h */,
@@ -396,7 +397,7 @@
 				88638DD50DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.h */,
 				88638DD60DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m */,
 			);
-			name = Operations;
+			name = OLD;
 			sourceTree = "<group>";
 		};
 		88638C0B0DB3E72000DC5C45 /* Library */ = {
@@ -417,8 +418,7 @@
 		88638C0C0DB3E74500DC5C45 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				88638BEF0DB3E70E00DC5C45 /* CWLibraryView.h */,
-				88638BF00DB3E70E00DC5C45 /* CWLibraryView.m */,
+				886549DD0DB84148000BB782 /* QuickLook.h */,
 				88E8D7C40DAD7D6D009A57FB /* CWWindow.h */,
 				88E8D7C50DAD7D6D009A57FB /* CWWindow.m */,
 				888519290DAD077B003DFBC4 /* CWWindowController.h */,
@@ -519,8 +519,8 @@
 			children = (
 				88638BD60DB3E6D600DC5C45 /* iTunes.h */,
 				88638C0B0DB3E72000DC5C45 /* Library */,
-				88638C0A0DB3E71900DC5C45 /* Operations */,
 				88638C0C0DB3E74500DC5C45 /* Views */,
+				8825398F0DB7925800C068FC /* OLD */,
 				888519200DAD06F3003DFBC4 /* Resources */,
 			);
 			path = CWWindowController;
@@ -691,7 +691,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88B2A1260DAC0D3200280971 /* Info.plist in Resources */,
 				888519480DAD07E6003DFBC4 /* Plugin.xml in Resources */,
 				88461CB50DAD6FAC001F32ED /* CWWindow.xib in Resources */,
 				886E7E3B0DB7763000E75261 /* Cover Missing (TV).png in Resources */,
@@ -707,7 +706,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
-				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				88B2A0CB0DAC09BC00280971 /* Plugin.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,14 +719,10 @@
 			files = (
 				8885192B0DAD077B003DFBC4 /* CWWindowController.m in Sources */,
 				88E8D7C60DAD7D6D009A57FB /* CWWindow.m in Sources */,
-				88638C010DB3E70E00DC5C45 /* CWLibraryView.m in Sources */,
-				88638C020DB3E70E00DC5C45 /* CWReloadLibraryOperation.m in Sources */,
-				88638C030DB3E70E00DC5C45 /* CWUpdateLibraryOperation.m in Sources */,
 				88638C060DB3E70E00DC5C45 /* CWLibrary.m in Sources */,
 				88638C070DB3E70E00DC5C45 /* CWArtist.m in Sources */,
 				88638C080DB3E70E00DC5C45 /* CWAlbum.m in Sources */,
 				88638C090DB3E70E00DC5C45 /* CWTrack.m in Sources */,
-				88638DD70DB4DDBD00DC5C45 /* CWLoadArtworkThumbnailOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +812,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -848,6 +846,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

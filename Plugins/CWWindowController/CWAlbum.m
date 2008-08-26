@@ -9,39 +9,30 @@
 #import "CWAlbum.h"
 #import "CWLibrary.h"
 #import "CWTrack.h"
+#import <QuickLook/QuickLook.h>
 
 @implementation CWAlbum
 
-- (void)dealloc {
-	[tracks release];
-	[super dealloc];
-}
-
+@synthesize name;
+@synthesize sortName;
 @synthesize tracks;
-
-- (CGImageRef)createAlbumArtwork:(CGSize)size {
-	if ([tracks count] > 0) {
-		CGImageRef imageRef = [[tracks objectAtIndex:0] createTrackArtwork:size];
-		if (imageRef) {
-			return imageRef;
-		}
-	}
-	return nil;
-}
 
 - (NSString *)imageUID {
 	return [[tracks objectAtIndex:0] persistentID];
 }
 
 - (NSString *)imageRepresentationType {
-	return IKImageBrowserCGImageRepresentationType;
+	return IKImageBrowserPathRepresentationType;
+//	return IKImageBrowserNSDataRepresentationType;
+//	return IKImageBrowserQuickLookPathRepresentationType;
 }
 
 - (id)imageRepresentation {
-	if (!artwork) {
-		artwork = [[tracks objectAtIndex:0] createTrackArtwork:CGSizeMake(128, 128)];
+	if (!imageRepresentation) {
+		imageRepresentation = [[tracks objectAtIndex:0] artworkPath];
+//		imageRepresentation = [[tracks objectAtIndex:0] artwork];
 	}
-	return (id) artwork;
+	return imageRepresentation;
 }
 
 @end

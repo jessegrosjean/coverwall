@@ -10,10 +10,14 @@
 #import <Quartz/Quartz.h>
 
 
-@interface CWArtist : CALayer {
+@interface CWArtist : NSObject {
+	NSString *name;
+	NSString *sortName;
 	NSMutableArray *albums;
 }
 
+@property(readonly) NSString *name;
+@property(readonly) NSString *sortName;
 @property(readonly) NSArray *albums;
 
 @end

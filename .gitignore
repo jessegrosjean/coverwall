@@ -1,3 +1,4 @@
 .DS_Store
-CoverWall.xcodeproj/jesse.pbxuser
-CoverWall.xcodeproj/jesse.perspectivev3
+build
+*.pbxuser
+*.perspectivev3

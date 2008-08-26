@@ -10,7 +10,11 @@
 #import <Quartz/Quartz.h>
 
 
-@interface CWLibrary : CALayer {
+@class CWTrack;
+@class CWArtist;
+@class CWAlbum;
+
+@interface CWLibrary : NSObject {
 	NSMutableArray *artists;
 	NSMutableArray *albums;
 	NSMutableArray *tracks;
@@ -21,15 +25,15 @@
 #pragma mark Class Methods
 
 + (id)sharedInstance;
-+ (NSString *)libraryXMLPath;
++ (NSString *)cacheFolder;
++ (NSMutableDictionary *)libraryXML;
 	
-- (id)artistWithName:(NSString *)aName;
 @property(readonly) NSArray *artists;
-- (id)albumWithName:(NSString *)aName;
+- (CWArtist *)artistForTrack:(CWTrack *)aTrack;
 @property(readonly) NSArray *albums;
+- (CWAlbum *)albumForTrack:(CWTrack *)aTrack;
 @property(readonly) NSArray *tracks;
 
 - (void)reload;
-- (void)clearLayer;
 
 @end

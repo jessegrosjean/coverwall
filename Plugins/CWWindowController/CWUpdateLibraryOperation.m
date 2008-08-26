@@ -17,7 +17,7 @@
 
 - (id)initWithLibrary:(CWLibrary *)aLibrary {
 	[super init];
-	library = [aLibrary retain];
+	library = aLibrary;
 	loadArtworkOperationQueue = [[NSOperationQueue alloc] init];
 	return self;
 }
@@ -51,8 +51,8 @@
 	NSInteger yOffset = (bounds.size.height - (rows * albumSize)) / 2;	
 	NSUInteger row = rows - 1;
 	NSUInteger column = 0;
-	NSSortDescriptor *artistNameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"artist.name" ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease];
-	NSSortDescriptor *albumNameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease];
+	NSSortDescriptor *artistNameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"artist.name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+	NSSortDescriptor *albumNameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
 	visibleAlbums = [visibleAlbums sortedArrayUsingDescriptors:[NSArray arrayWithObjects:albumNameSortDescriptor, artistNameSortDescriptor, nil]];
 	
 	for (CWAlbum *eachAlbum in visibleAlbums) {

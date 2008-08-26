@@ -57,8 +57,8 @@
 
 - (NSArray *)visibleAlbums {
 	NSArray *visibleAlbums = [library.albums filteredArrayUsingPredicate:self.albumFilter];
-	NSSortDescriptor *artistNameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"artist.name" ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease];
-	NSSortDescriptor *albumNameSortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease];
+	NSSortDescriptor *artistNameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"artist.name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+	NSSortDescriptor *albumNameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
 	visibleAlbums = [visibleAlbums sortedArrayUsingDescriptors:[NSArray arrayWithObjects:artistNameSortDescriptor, albumNameSortDescriptor, nil]];
 	return visibleAlbums;
 }

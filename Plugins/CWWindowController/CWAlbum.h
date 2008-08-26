@@ -10,13 +10,15 @@
 #import <Quartz/Quartz.h>
 
 
-@interface CWAlbum : CALayer {
-	NSMutableArray *tracks;
-	CGImageRef artwork;
+@interface CWAlbum : NSObject {
+	NSString *name;
+	NSString *sortName;
+	NSString *imageRepresentation;
+	NSMutableArray *tracks;	
 }
 
+@property(readonly) NSString *name;
+@property(readonly) NSString *sortName;
 @property(readonly) NSArray *tracks;
-
-- (CGImageRef)createAlbumArtwork:(CGSize)size;
 
 @end
